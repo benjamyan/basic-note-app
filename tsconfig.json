@@ -1,0 +1,71 @@
+{
+  // "compilerOptions": {
+  //   "target": "es5",
+  //   "module": "esnext",
+  //   // "module": "CommonJS",
+  //   "allowJs": true,
+  //   "checkJs": false,
+  //   "outDir": "./dist",
+  //   "removeComments": true,
+  //   "esModuleInterop": true,
+  //   "forceConsistentCasingInFileNames": true,
+  //   "strict": false,
+  //   "skipLibCheck": true,
+  //   "lib": [
+  //     "dom",
+  //     "dom.iterable",
+  //     "esnext"
+  //   ],
+  //   "allowSyntheticDefaultImports": true,
+  //   "moduleResolution": "node",
+  //   "resolveJsonModule": true,
+  //   "isolatedModules": true,
+  //   "noEmit": true,
+  //   "jsx": "react"
+  // },
+  "compilerOptions": {
+      "target": "es5",
+      "lib": [
+          "dom",
+          "dom.iterable",
+          "esnext"
+      ],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": false,
+      "jsx": "react-jsx"
+  },
+  // "watchOptions": {
+  //   // Use native file system events for files and directories
+  //   "watchFile": "useFsEvents",
+  //   "watchDirectory": "useFsEvents",
+  //   // Poll files for updates more frequently
+  //   // when they're updated a lot.
+  //   "fallbackPolling": "dynamicPriority",
+  //   // Don't coalesce watch notification
+  //   "synchronousWatchDirectory": true,
+  //   // Finally, two additional settings for reducing the amount of possible
+  //   // files to track  work from these directories
+  //   "excludeDirectories": ["**/node_modules", "public"],
+  //   "excludeFiles": ["build/fileWhichChangesOften.ts"]
+  // },
+  "exclude": [
+    // "node_modules",
+    "public",
+    "dist",
+    "**/*.old.ts",
+    "*.bak.*"
+  ],
+  "include": [
+    "src" 
+  ]
+}

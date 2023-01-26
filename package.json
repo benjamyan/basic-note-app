@@ -1,0 +1,88 @@
+{
+  "name": "another-note-taking-app",
+  "version": "0.1.0",
+  "scripts": {
+    "startold": "concurrently 'react-scripts start' 'tsc -w'",
+    "start": "webpack serve",
+    "dev": "clear && concurrently 'node --loader ts-node/esm api/main.ts' 'cd ./src && react-scripts start' 'tsc -w'",
+    "api-dev": "clear && nodemon serve/server.ts && tsc -w",
+    "api-dev-temp": "clear && node --loader ts-node/esm --experimental-specifier-resolution=node serve/server.ts",
+    "client-dev": "clear && react-scripts start",
+    "test": "react-scripts test",
+    "build": "react-scripts build",
+    "build-dist": "./node_modules/typescript/bin/tsc",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "rc-time-picker": "^3.7.3",
+    "react": "^17.0.2",
+    "react-datepicker": "^4.3.0",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-scripts": "^3.4.4",
+    "source-map-support": "^0.5.21",
+    "styled-components": "^5.3.3",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.32",
+    "@types/react-dom": "^17.0.10",
+    "@types/styled-components": "^5.1.26",
+    "babel-loader": "^8.2.5",
+    "concurrently": "^7.6.0",
+    "css-loader": "^6.7.3",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "html-inline-css-webpack-plugin": "^1.11.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "nodemon": "^2.0.15",
+    "react-dev-tools": "^0.0.1",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.0",
+    "ts-node": "^10.4.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "proxy": "http://localhost:4000",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react",
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}
