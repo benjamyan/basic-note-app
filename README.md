@@ -1,0 +1,1 @@
+I started working on a note taking app back in early 2021. Going back to it, Its a fantastic example of overengineering. Gunna spend a day or so and get it working.
